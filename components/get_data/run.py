@@ -19,7 +19,7 @@ def go(args):
     run = wandb.init(job_type="download_file")
     run.config.update(args)
     
-    logger.info(f"Returning sample {args.sample}")
+    
     logger.info(f"Returning sample {args.sample}")
     logger.info(f"Uploading {args.artifact_name} to Weights & Biases")
     log_artifact(
