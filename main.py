@@ -97,7 +97,7 @@ def go(config: DictConfig):
 
             # NOTE: use the rf_config we just created as the rf_config parameter for the train_random_forest
             # step
-
+""" 
             _ = mlflow.run(
                 f"{config['main']['src_repository']}/train_random_forest",
                 "main",
@@ -110,7 +110,7 @@ def go(config: DictConfig):
                     "max_tfidf_features": config['modeling']['max_tfidf_features'],
                     "output_artifact" : "random_forest_export"
                     }
-                )
+                ) """
 
 
         if "test_regression_model" in active_steps:
