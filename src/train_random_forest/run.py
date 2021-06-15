@@ -282,8 +282,8 @@ if __name__ == "__main__":
     parser.add_argument(
         "--output_artifact",
         type=str,
-        help="Name for the output serialized model",
-        required=True,
+        help="Name for the output serialized model"
+        """ required=True, """
     )
 
     args = parser.parse_args()
