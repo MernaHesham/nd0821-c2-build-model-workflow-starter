@@ -25,4 +25,4 @@ def log_artifact(artifact_name, artifact_type, artifact_description, filename, w
     # We need to call this .wait() method before we can use the
     # version below. This will wait until the artifact is loaded into W&B and a
     # version is assigned
-    artifact.wait()
+    #artifact.wait()
