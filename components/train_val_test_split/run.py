@@ -45,7 +45,7 @@ def go(args):
      description="trainval_data_split",
     )
     artifact.add_file("trainval_data.csv")
-
+    logger.info(f"Uploading trainval_data.csv dataset")
     run.log_artifact(artifact)
 
     artifact2 = wandb.Artifact(
@@ -54,8 +54,11 @@ def go(args):
      description="test_data_split",
     )
     artifact2.add_file("test_data.csv")
+    logger.info(f"Uploading test_data.csv dataset")
 
     run.log_artifact(artifact2)
+    run.finish()
+    logger.info(f"Done")
 
     """ for df, k in zip([trainval, test], ['trainval', 'test']):
         logger.info(f"Uploading {k}_data.csv dataset")
