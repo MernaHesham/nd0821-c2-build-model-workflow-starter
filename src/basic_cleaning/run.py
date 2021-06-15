@@ -30,8 +30,8 @@ def go(args):
     logger.info("Reading with pandas")
     df = pd.read_csv(artifact_local_path)
     # Drop outliers
-    min_price = args.min_price
-    max_price = args.max_price
+    min_price = float(args.min_price)
+    max_price = float(args.max_price)
     idx = df['price'].between(min_price, max_price)
     df = df[idx]
 
