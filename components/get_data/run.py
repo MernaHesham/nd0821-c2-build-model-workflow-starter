@@ -29,6 +29,7 @@ def go(args):
         os.path.join("data", args.sample),
         run,
     )
+    logger.info("Done Uploading")
 
 
 if __name__ == "__main__":
