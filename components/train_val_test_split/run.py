@@ -35,12 +35,14 @@ def go(args):
     )
 
     # Save to output files
+    trainval.to_csv("trainval_data.csv")
+
+    test.to_csv("test_data.csv")
     for df, k in zip([trainval, test], ['trainval', 'test']):
         logger.info(f"Uploading {k}_data.csv dataset")
         with tempfile.NamedTemporaryFile("w") as fp:
 
-            df.to_csv(fp.name, index=False)
-
+            
             log_artifact(
                 f"{k}_data.csv",
                 f"{k}_data",
