@@ -42,11 +42,14 @@ def go(args):
 
     run = wandb.init(job_type="train_random_forest")
     run.config.update(args)
+
+    ## Error Invalid argument: c://ddj//...//rf_config.json'"
     logger.info(f"Fetching json {args.rf_config}")
-    path_to_json = args.rf_config
     # Get the Random Forest configuration and update W&B
-    with open(path_to_json) as fp:
+    with open(f"{args.rf_config}") as fp:
         rf_config = json.load(fp)
+
+
     run.config.update(rf_config)
 
     # Fix the random seed for the Random Forest, so we get reproducible results
