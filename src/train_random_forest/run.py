@@ -42,7 +42,7 @@ def go(args):
 
     run = wandb.init(job_type="train_random_forest")
     run.config.update(args)
-
+    logger.info(f"Fetching json {args.rf_config}")
     # Get the Random Forest configuration and update W&B
     with open(args.rf_config) as fp:
         rf_config = json.load(fp)
