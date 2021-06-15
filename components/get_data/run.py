@@ -30,6 +30,7 @@ def go(args):
         run,
     )
     logger.info("Done Uploading")
+    run.finish()
 
 
 if __name__ == "__main__":
