@@ -44,12 +44,14 @@ def go(args):
     run.config.update(args)
 
     ## Error Invalid argument: c://ddj//...//rf_config.json'"
-    logger.info(f"Fetching json {args.rf_config}")
+    #logger.info(f"Fetching json {args.rf_config}")
     # Get the Random Forest configuration and update W&B
-    with open(f"{args.rf_config}") as fp:
+    #with open(args.rf_config) as fp:
+    #    rf_config = json.load(fp)
+    with open('rf_config.json') as fp:
         rf_config = json.load(fp)
 
-
+    print(rf_config)
     run.config.update(rf_config)
 
     # Fix the random seed for the Random Forest, so we get reproducible results
