@@ -97,7 +97,7 @@ def go(config: DictConfig):
 
             # use the rf_config we just created as the rf_config parameter for the train_random_forest
             # step
-""" 
+            """ 
             _ = mlflow.run(
                 f"{config['main']['src_repository']}/train_random_forest",
                 "main",
