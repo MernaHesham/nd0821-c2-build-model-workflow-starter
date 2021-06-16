@@ -12,7 +12,8 @@ entry_points:
 
       hydra_options:
         description: Other configuration parameters to override
-        type: str
+        type: dict
         default: ''
 
-    command: "python main.py main.steps='{steps}'"
+    command: >- 
+      python main.py main.steps='{steps}' {hydra_options}
