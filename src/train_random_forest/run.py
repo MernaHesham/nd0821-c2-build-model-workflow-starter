@@ -45,7 +45,7 @@ def go(args):
 
     ## Error Invalid argument: c://ddj//...//rf_config.json'"
     logger.info(f"Fetching json {args.rf_config}")
-    temp_string = r"{args.rf_config}"
+    temp_string = args.rf_config
     # Get the Random Forest configuration and update W&B
     with open(temp_string) as fp:
         rf_config = json.load(fp)
