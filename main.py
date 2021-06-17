@@ -123,8 +123,7 @@ def go(config: DictConfig):
                     "test_dataset": "test_data.csv:latest"
                     }
                 )
-
-            pass
+# mlflow run https://github.com/MernaHesham/nd0821-c2-build-model-workflow-starter.git -v 1.0.0 -P hydra_options="etl.sample='sample2.csv'"
 
 
 if __name__ == "__main__":

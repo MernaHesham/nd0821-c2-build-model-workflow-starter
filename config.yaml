@@ -7,7 +7,7 @@ main:
   experiment_name: development
   steps: all
 etl:
-  sample: "sample1.csv"
+  sample: "sample2.csv"
   min_price: 10  # dollars
   max_price: 350  # dollars
 data_check:
@@ -34,6 +34,6 @@ modeling:
     # Here -1 means all available cores
     n_jobs: -1
     criterion: mae
-    max_features: 0.1
+    max_features: 0.5
     # DO not change the following
     oob_score: true
